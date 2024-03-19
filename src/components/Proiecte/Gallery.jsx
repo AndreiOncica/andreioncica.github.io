@@ -1,9 +1,20 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { colors } from "../../GlobalStyles";
-import cover1 from '../../assets/Gallery/Casa Voluntari/cover.jpg'
-import cover2 from '../../assets/Gallery/2.CASA ORAS POPESTI LEORDENI/cover.jpg'
-import cover3 from '../../assets/Gallery/3.PENTHOUSE ORAS CONSTANTA/cover.jpg'
+import cover1 from "../../assets/Gallery/Casa Voluntari/cover.jpg";
+import cover2 from "../../assets/Gallery/2.CASA ORAS POPESTI LEORDENI/cover.jpg";
+import cover3 from "../../assets/Gallery/3.PENTHOUSE ORAS CONSTANTA/cover.jpg";
+import cover4 from "../../assets/Gallery/4.HOL SI LIVING CARTIER BUCURESTII NOI/cover.jpg";
+import cover5 from "../../assets/Gallery/5.CLINICA ESTETICA - HOUSE OF BEAUTY/cover.jpg";
+import cover6 from "../../assets/Gallery/7.BUCATARIE SOSEAUA GIURGIULUI/cover.jpg";
+
+import cover7 from "../../assets/Gallery/Casa Voluntari/cover.jpg";
+import cover8 from "../../assets/Gallery/2.CASA ORAS POPESTI LEORDENI/cover.jpg";
+import cover9 from "../../assets/Gallery/3.PENTHOUSE ORAS CONSTANTA/cover.jpg";
+
+import cover10 from "../../assets/Gallery/Casa Voluntari/cover.jpg";
+import cover11 from "../../assets/Gallery/2.CASA ORAS POPESTI LEORDENI/cover.jpg";
+import cover12 from "../../assets/Gallery/3.PENTHOUSE ORAS CONSTANTA/cover.jpg";
 
 export const gallery = [
   {
@@ -33,14 +44,14 @@ export const gallery = [
       "../../assets/Gallery/4.HOL SI LIVING CARTIER BUCURESTII NOI/*.{png,jpg,jpeg,svg}"
     ),
     cover:
-      "/src/assets/Gallery/4.HOL SI LIVING CARTIER BUCURESTII NOI/cover.jpg",
+      cover4,
   },
   {
     name: "Clinica estetica - House of Beauty",
     link: import.meta.glob(
       "../../assets/Gallery/5.CLINICA ESTETICA - HOUSE OF BEAUTY/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/5.CLINICA ESTETICA - HOUSE OF BEAUTY/cover.jpg",
+    cover: cover5,
   },
   {
     name: "Bucatarie Soseaua Giurgiului",
@@ -276,9 +287,9 @@ export default function Gallery({ projectName, toggleShow, openState }) {
         />
         <Wrapper
           style={{
-            display: 'flex',
+            display: "flex",
             width: "100%",
-            justifyContent:'flex-start',
+            justifyContent: "flex-start",
             padding: "1rem",
             overflowX: "scroll",
             height: "100%",
