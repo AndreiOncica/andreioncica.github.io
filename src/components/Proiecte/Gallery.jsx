@@ -8,13 +8,22 @@ import cover4 from "../../assets/Gallery/4.HOL SI LIVING CARTIER BUCURESTII NOI/
 import cover5 from "../../assets/Gallery/5.CLINICA ESTETICA - HOUSE OF BEAUTY/cover.jpg";
 import cover6 from "../../assets/Gallery/7.BUCATARIE SOSEAUA GIURGIULUI/cover.jpg";
 
-import cover7 from "../../assets/Gallery/Casa Voluntari/cover.jpg";
-import cover8 from "../../assets/Gallery/2.CASA ORAS POPESTI LEORDENI/cover.jpg";
-import cover9 from "../../assets/Gallery/3.PENTHOUSE ORAS CONSTANTA/cover.jpg";
-
-import cover10 from "../../assets/Gallery/Casa Voluntari/cover.jpg";
-import cover11 from "../../assets/Gallery/2.CASA ORAS POPESTI LEORDENI/cover.jpg";
-import cover12 from "../../assets/Gallery/3.PENTHOUSE ORAS CONSTANTA/cover.jpg";
+// import cover7 from "../../assets/Gallery/8.APARTAMENT ORAS GIURGIU/cover.jpeg";
+import cover8 from "../../assets/Gallery/9.LIVING CASA ORAS GIURGIU/cover.jpg";
+import cover9 from "../../assets/Gallery/10.GARSONIERA BULEVARDUL TIMISIOARA/cover.jpg";
+import cover10 from "../../assets/Gallery/11.APARTAMENT PARTIAL ORAS MIOVENI/cover.jpg";
+import cover11 from "../../assets/Gallery/12.APARTAMENT PARTIAL ORAS PLOIESTI/cover.jpg";
+import cover12 from "../../assets/Gallery/13.APARTAMENT ZONA GROZAVESTI/cover.jpg";
+import cover13 from "../../assets/Gallery/14.GARSONIERA PIPERA/cover.jpg";
+import cover14 from "../../assets/Gallery/15.APARTAMENT PARTIAL ZONA METALURGIEI/cover.jpg";
+// import cover15 from "../../assets/Gallery/16.APARTAMENT ORAS OTOPENI/cover.heic";
+import cover16 from "../../assets/Gallery/17.BUCATARIE VERDE/cover.jpg";
+import cover17 from "../../assets/Gallery/18.RANDARI CASA STRADA AVIONULUI/cover.jpeg";
+import cover18 from "../../assets/Gallery/19.RANDARI RESTAURANTA PONTON GIURGIU/cover.jpeg";
+import cover19 from "../../assets/Gallery/20.RANDARI BUCATARIE STRADA WITTING/cover.jpeg";
+import cover20 from "../../assets/Gallery/21.MOODBOARDS ARTIST LOFT/cover.jpg";
+import cover21 from "../../assets/Gallery/22.CASA PIPERA/cover.jpeg";
+import cover22 from "../../assets/Gallery/23.APARATMENT POLITEHNICA/cover.jpeg";
 
 export const gallery = [
   {
@@ -43,8 +52,7 @@ export const gallery = [
     link: import.meta.glob(
       "../../assets/Gallery/4.HOL SI LIVING CARTIER BUCURESTII NOI/*.{png,jpg,jpeg,svg}"
     ),
-    cover:
-      cover4,
+    cover: cover4,
   },
   {
     name: "Clinica estetica - House of Beauty",
@@ -58,7 +66,7 @@ export const gallery = [
     link: import.meta.glob(
       "../../assets/Gallery/7.BUCATARIE SOSEAUA GIURGIULUI/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/7.BUCATARIE SOSEAUA GIURGIULUI/cover.jpeg",
+    cover: cover6,
   },
   {
     name: "Apartament Giurgiu",
@@ -72,50 +80,49 @@ export const gallery = [
     link: import.meta.glob(
       "../../assets/Gallery/9.LIVING CASA ORAS GIURGIU/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/9.LIVING CASA ORAS GIURGIU/cover.jpg",
+    cover: cover8,
   },
   {
     name: "Garsoniera Bulevardul Timisoara",
     link: import.meta.glob(
       "../../assets/Gallery/10.GARSONIERA BULEVARDUL TIMISIOARA/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/10.GARSONIERA BULEVARDUL TIMISIOARA/cover.jpg",
+    cover: cover9,
   },
   {
     name: "Apartament partial Mioveni",
     link: import.meta.glob(
       "../../assets/Gallery/11.APARTAMENT PARTIAL ORAS MIOVENI/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/11.APARTAMENT PARTIAL ORAS MIOVENI/cover.jpg",
+    cover: cover10,
   },
   {
     name: "Apartament partial Ploiesti",
     link: import.meta.glob(
       "../../assets/Gallery/12.APARTAMENT PARTIAL ORAS PLOIESTI/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/12.APARTAMENT PARTIAL ORAS PLOIESTI/cover.jpg",
+    cover: cover11,
   },
   {
     name: "Apartament Grozavesti",
     link: import.meta.glob(
       "../../assets/Gallery/13.APARTAMENT ZONA GROZAVESTI/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/13.APARTAMENT ZONA GROZAVESTI/cover.jpg",
+    cover: cover12,
   },
   {
     name: "Garsoniera Pipera",
     link: import.meta.glob(
       "../../assets/Gallery/14.GARSONIERA PIPERA/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/14.GARSONIERA PIPERA/cover.jpg",
+    cover: cover13,
   },
   {
     name: "Apartament partial Metalurgiei",
     link: import.meta.glob(
       "../../assets/Gallery/15.APARTAMENT PARTIAL ZONA METALURGIEI/*.{png,jpg,jpeg,svg}"
     ),
-    cover:
-      "/src/assets/Gallery/15.APARTAMENT PARTIAL ZONA METALURGIEI/cover.jpg",
+    cover: cover14,
   },
   {
     name: "Apartament Otopeni",
@@ -129,50 +136,49 @@ export const gallery = [
     link: import.meta.glob(
       "../../assets/Gallery/17.BUCATARIE VERDE/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/17.BUCATARIE VERDE/cover.jpg",
+    cover: cover16,
   },
   {
     name: "Casa Strada Avionului",
     link: import.meta.glob(
       "../../assets/Gallery/18.RANDARI CASA STRADA AVIONULUI/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/18.RANDARI CASA STRADA AVIONULUI/cover.jpeg",
+    cover: cover17,
   },
   {
     name: "Restaurant Ponton Giurgiu",
     link: import.meta.glob(
       "../../assets/Gallery/19.RANDARI RESTAURANTA PONTON GIURGIU/*.{png,jpg,jpeg,svg}"
     ),
-    cover:
-      "/src/assets/Gallery/19.RANDARI RESTAURANTA PONTON GIURGIU/cover.jpeg",
+    cover: cover18,
   },
   {
     name: "Bucatarie Strada Witting",
     link: import.meta.glob(
       "../../assets/Gallery/20.RANDARI BUCATARIE STRADA WITTING/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/20.RANDARI BUCATARIE STRADA WITTING/cover.jpeg",
+    cover: cover19,
   },
   {
     name: "Moodboards Artist Loft",
     link: import.meta.glob(
       "../../assets/Gallery/21.MOODBOARDS ARTIST LOFT/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/21.MOODBOARDS ARTIST LOFT/cover.jpg",
+    cover: cover20,
   },
   {
     name: "Casa Pipera",
     link: import.meta.glob(
       "../../assets/Gallery/22.CASA PIPERA/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/22.CASA PIPERA/cover.jpeg",
+    cover: cover21,
   },
   {
     name: "Apartament Politehnica",
     link: import.meta.glob(
       "../../assets/Gallery/23.APARATMENT POLITEHNICA/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/23.APARATMENT POLITEHNICA/cover.jpeg",
+    cover: cover22,
   },
 ];
 
