@@ -1,7 +1,10 @@
+import { useState, useEffect } from "react";
 import { GlobalStyles } from "./GlobalStyles";
 import Navbar from "./components/Navbar/Navbar";
-import Main from './components/Main/Main'
-import { useState, useEffect } from "react";
+import Main from "./components/Main/Main";
+import About from "./components/About/About";
+import Projects from "./components/Proiecte/Projects";
+import Mobila from "./components/Mobila/Mobila";
 
 export default function App() {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
@@ -22,7 +25,10 @@ export default function App() {
     <>
       <GlobalStyles />
       <Navbar isDesktop={viewportWidth >= 768} />
-      <Main />
+      <Main viewportWidth={viewportWidth} />
+      <About />
+      <Projects />
+      <Mobila />
     </>
   );
 }

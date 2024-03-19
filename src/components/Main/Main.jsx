@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { colors, Container } from "../../GlobalStyles";
 import MainImg from "../../assets/MainImg.jpeg";
 
 const MainDiv = styled.section`
-  height: calc(100dvh - 191px);
+  padding: 4rem 0;
   background: ${colors.white};
 `;
 
@@ -22,6 +22,33 @@ const Button = styled.a`
 `;
 
 export default function Main() {
+  const [titleFontSize, setTitleFontSize] = useState("");
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (viewportWidth > 1300) {
+      setTitleFontSize(56);
+    } else if (viewportWidth > 1200) {
+      setTitleFontSize(42);
+    } else if (viewportWidth > 900) {
+      setTitleFontSize(32);
+    } else {
+      setTitleFontSize(26);
+    }
+  }, [viewportWidth]);
+
   return (
     <MainDiv>
       <Container
@@ -48,21 +75,30 @@ export default function Main() {
             zIndex: 1,
           }}
         >
-          <div style={{ fontSize: "56px" }}>DESIGN PENTRU ORICINE</div>
+          <div style={{ fontSize: `${titleFontSize}px` }}>
+            DESIGN PENTRU ORICINE
+          </div>
           <div
             style={{
               alignSelf: "center",
-              fontSize: "30px",
+              fontSize: `${titleFontSize / 1.8}px`,
               color: colors.black,
             }}
           >
             Let's design!
           </div>
         </div>
-        <Button href="#" style={{ gridArea: "BTN1" }}>
+        <Button
+          href="#"
+          style={{ gridArea: "BTN1", fontSize: `${titleFontSize / 2.5}px` }}
+        >
           Afla mai multe
         </Button>
-        <Button href="#" main style={{ gridArea: "BTN2" }}>
+        <Button
+          href="#"
+          main
+          style={{ gridArea: "BTN2", fontSize: `${titleFontSize / 2.5}px` }}
+        >
           Cere oferta
         </Button>
         <img
@@ -70,7 +106,7 @@ export default function Main() {
             width: "100%",
             gridArea: "IMG",
             boxShadow: `15px 15px 1px  ${colors.black}`,
-            opacity: '.9'
+            opacity: ".9",
           }}
           src={MainImg}
           alt=""

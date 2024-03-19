@@ -38,8 +38,10 @@ export const GlobalStyles = createGlobalStyle`
 export const Container = styled.div`
     width: 80%;
     max-width: 1175px;
+    height: ${({height}) => height};
     margin: 0 auto;
     display: ${({display}) => display || 'block'};
+    flex-direction: ${({direction}) => direction};
     align-items: ${({align}) => align || 'center'};
     justify-content: ${({justify}) => justify || 'center'};
     background-color: ${({background}) => background};
