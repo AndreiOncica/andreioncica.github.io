@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { colors } from "../../GlobalStyles";
+import cover1 from '../../assets/Gallery/Casa Voluntari/cover.jpg'
+import cover2 from '../../assets/Gallery/2.CASA ORAS POPESTI LEORDENI/cover.jpg'
+import cover3 from '../../assets/Gallery/3.PENTHOUSE ORAS CONSTANTA/cover.jpg'
 
 export const gallery = [
   {
@@ -8,21 +11,21 @@ export const gallery = [
     link: import.meta.glob(
       "../../assets/Gallery/Casa Voluntari/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/Casa Voluntari/cover.jpg",
+    cover: cover1,
   },
   {
     name: "Casa Popesti Leordeni",
     link: import.meta.glob(
       "../../assets/Gallery/2.CASA ORAS POPESTI LEORDENI/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/2.CASA ORAS POPESTI LEORDENI/cover.jpg",
+    cover: cover2,
   },
   {
     name: "Penthouse Constanta",
     link: import.meta.glob(
       "../../assets/Gallery/3.PENTHOUSE ORAS CONSTANTA/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/3.PENTHOUSE ORAS CONSTANTA/cover.jpg",
+    cover: cover3,
   },
   {
     name: "Hol si living Bucurestii Noi",

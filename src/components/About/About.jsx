@@ -63,7 +63,7 @@ const Text = styled.div`
 
 export default function About() {
   return (
-    <AboutSection style={{ display: "grid", position: "relative" }}>
+    <AboutSection style={{ display: "grid", position: "relative" }} id="poveste">
       <BackgroundLayer>
         <div></div>
         <div></div>

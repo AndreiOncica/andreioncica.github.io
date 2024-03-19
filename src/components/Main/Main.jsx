@@ -89,13 +89,13 @@ export default function Main() {
           </div>
         </div>
         <Button
-          href="#"
+          href="#poveste"
           style={{ gridArea: "BTN1", fontSize: `${titleFontSize / 2.5}px` }}
         >
           Afla mai multe
         </Button>
         <Button
-          href="#"
+          href="#contact"
           main
           style={{ gridArea: "BTN2", fontSize: `${titleFontSize / 2.5}px` }}
         >

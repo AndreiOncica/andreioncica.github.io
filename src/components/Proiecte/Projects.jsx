@@ -80,7 +80,7 @@ export default function Projects() {
   }
 
   return (
-    <ProjectsSection>
+    <ProjectsSection id="proiecte">
       <Container>
         <div style={{ fontSize: "1.5rem" }}>PROIECTE</div>
       </Container>
