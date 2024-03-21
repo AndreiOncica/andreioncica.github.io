@@ -4,7 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components'
 export const colors = {
     white: '#f4f4f4',
     black: '#3C4443',
-    accent: ''
+    accent: '#B3BCBB'
 }
 
 export const font = {

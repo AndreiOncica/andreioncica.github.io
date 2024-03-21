@@ -1,40 +1,57 @@
-import React from "react";
-import { colors, Container } from "../../GlobalStyles";
+import React, { useRef, useEffect, useState } from "react";
+import { Nav, navContainerStyles, Logo, Line } from "./Navbar.styles";
+import { Container } from "../../GlobalStyles";
+import Links from "./Links";
 import LogoImg from "../../assets/Logo.png";
-import { navGap, Nav, Logo, Links, Line } from "./Navbar.styles";
-import Desktop from "./Desktop";
-import Mobile from "./Mobile";
-
-const navLinks = [
-  { href: "#poveste", label: "POVESTE" },
-  { href: "#proiecte", label: "PROIECTE" },
-  { href: "#preturi", label: "PRETURI" },
-  { href: "#contact", label: "CONTACT" },
-];
-
-const commonContainerStyles = {
-  background: colors.white,
-  gap: navGap,
-  zIndex: "11",
-  gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
-};
+import HamburgerBtn from "./HamburgerBtn";
 
 export default function Navbar({ isDesktop }) {
+  const LogoRef = useRef(null);
+  const [getLogoWidth, setGetLogoWidth] = useState(null);
+  const [toggleBtn, setToggleBtn] = useState(false);
+
+  function handleClick() {
+    setToggleBtn((prevState) => !prevState);
+  }
+
+  useEffect(() => {
+    setGetLogoWidth(LogoRef.current.clientWidth);
+  }, []);
+
+  const mobileStyles = {
+    display: "flex",
+    flexDirection: "column",
+    gap: "2rem",
+    transform: toggleBtn ? "translateY(150px)" : "translateY(-1000px)",
+  };
+
   return (
-    <Nav style={{ backgroundColor: colors.white }}>
-      {isDesktop ? (
-        <Desktop
-          navLinks={navLinks}
-          commonContainerStyles={commonContainerStyles}
-          logoImg={LogoImg}
+    <Nav height={isDesktop ? 150 : 100}>
+      <Line></Line>
+      <Container style={navContainerStyles}>
+        {isDesktop ? (
+          <Links logoWidth={getLogoWidth} desktopLinks={isDesktop} />
+        ) : (
+          <Links
+            logoWidth={getLogoWidth}
+            handleClick={handleClick}
+            desktopLinks={!isDesktop}
+            setstyle={mobileStyles}
+          />
+        )}
+        <Logo
+          src={LogoImg}
+          alt="First Concept Logo"
+          ref={LogoRef}
+          position={isDesktop ? "auto" : "auto auto auto 2rem"}
+          width={isDesktop ? 270 : 170}
         />
-      ) : (
-        <Mobile
-          navLinks={navLinks}
-          commonContainerStyles={commonContainerStyles}
-          logoImg={LogoImg}
+        <HamburgerBtn
+          handleClick={handleClick}
+          toggleBtn={toggleBtn}
+          hideButton={isDesktop}
         />
-      )}
+      </Container>
     </Nav>
   );
 }

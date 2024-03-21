@@ -26,9 +26,9 @@ export default function App() {
       <GlobalStyles />
       <Navbar isDesktop={viewportWidth >= 768} />
       <Main viewportWidth={viewportWidth} />
-      <About />
-      <Projects />
-      <Mobila />
+      <About viewportWidth={viewportWidth} />
+      <Projects isDesktop={viewportWidth >= 768}/>
+      {/* <Mobila /> */}
     </>
   );
 }
