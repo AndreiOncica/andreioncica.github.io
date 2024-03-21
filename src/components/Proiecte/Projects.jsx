@@ -41,7 +41,6 @@ export default function Projects({ isDesktop }) {
         return prevProjects - scrollValue;
       }
     });
-    console.log(slideProjects);
   }
 
   function prevProjects() {
@@ -78,6 +77,7 @@ export default function Projects({ isDesktop }) {
       );
     });
   }
+  
 
   return (
     <ProjectsSection id="proiecte">

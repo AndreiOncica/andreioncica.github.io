@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { colors, Container } from "../../GlobalStyles";
 import { MainDiv, Button } from "./Main.styles";
 import MainImg from "../../assets/MainImg.jpeg";
@@ -6,6 +6,19 @@ import MainImg from "../../assets/MainImg.jpeg";
 export default function Main() {
   const [titleFontSize, setTitleFontSize] = useState(56);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const wrapperRef = useRef(undefined);
+  const imageRef = useRef(undefined);
+  const sectionRef = useRef(undefined);
+
+  useEffect(() => {
+    wrapperRef.current.style.transform = "translateX(0)"
+    
+    imageRef.current.style.transform = "translateX(0)"
+    sectionRef.current.style.opacity = 1;
+    setTimeout(() => {
+      wrapperRef.current.style.background = colors.white
+    }, 2000)
+  }, [])
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,9 +47,9 @@ export default function Main() {
   }, [viewportWidth]);
 
   return (
-    <MainDiv>
+    <MainDiv ref={sectionRef}>
       <Container className="main__container">
-        <div className="main__wrapper">
+        <div className="main__wrapper" ref={wrapperRef}>
           <div style={{ fontSize: `${titleFontSize}px` }}>
             DESIGN PENTRU ORICINE
           </div>
@@ -65,7 +78,7 @@ export default function Main() {
         >
           Cere oferta
         </Button>
-        <img className="main__image" src={MainImg} alt="" />
+        <img ref={imageRef} className="main__image" src={MainImg} alt="" />
       </Container>
     </MainDiv>
   );

@@ -5,6 +5,9 @@ import { colors } from '../../GlobalStyles'
 export const MainDiv = styled.section`
   padding: 4rem 0;
   background: ${colors.white};
+  overflow: hidden;
+  opacity: 0;
+  transition: 2s;
 
   @media screen and (max-width: 768px) {
     padding: 0;
@@ -29,10 +32,12 @@ export const MainDiv = styled.section`
         width: calc(100% + 16px);
         display: grid;
         grid-template-columns: auto auto;
-        background: ${colors.white};
+        background: transparent;
         padding: 1rem 0;
         top: 25%;
         z-index: 1;
+        transform: translateX(-150%);
+        transition: 2s;
     }
 
     .main__image {
@@ -40,6 +45,8 @@ export const MainDiv = styled.section`
         grid-area: IMG;
         box-shadow: 15px 15px 1px  ${colors.accent};
         opacity: .9;
+        transform: translateX(150%);
+        transition: 2s;
     }
 
     @media screen and (max-width: 768px) {

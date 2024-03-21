@@ -8,7 +8,7 @@ import cover4 from "../../assets/Gallery/4.HOL SI LIVING CARTIER BUCURESTII NOI/
 import cover5 from "../../assets/Gallery/5.CLINICA ESTETICA - HOUSE OF BEAUTY/cover.jpg";
 import cover6 from "../../assets/Gallery/7.BUCATARIE SOSEAUA GIURGIULUI/cover.jpg";
 
-// import cover7 from "../../assets/Gallery/8.APARTAMENT ORAS GIURGIU/cover.jpeg";
+import cover7 from "../../assets/Gallery/8.APARTAMENT ORAS GIURGIU/cover.jpg";
 import cover8 from "../../assets/Gallery/9.LIVING CASA ORAS GIURGIU/cover.jpg";
 import cover9 from "../../assets/Gallery/10.GARSONIERA BULEVARDUL TIMISIOARA/cover.jpg";
 import cover10 from "../../assets/Gallery/11.APARTAMENT PARTIAL ORAS MIOVENI/cover.jpg";
@@ -16,7 +16,7 @@ import cover11 from "../../assets/Gallery/12.APARTAMENT PARTIAL ORAS PLOIESTI/co
 import cover12 from "../../assets/Gallery/13.APARTAMENT ZONA GROZAVESTI/cover.jpg";
 import cover13 from "../../assets/Gallery/14.GARSONIERA PIPERA/cover.jpg";
 import cover14 from "../../assets/Gallery/15.APARTAMENT PARTIAL ZONA METALURGIEI/cover.jpg";
-// import cover15 from "../../assets/Gallery/16.APARTAMENT ORAS OTOPENI/cover.heic";
+import cover15 from "../../assets/Gallery/16.APARTAMENT ORAS OTOPENI/cover.jpg";
 import cover16 from "../../assets/Gallery/17.BUCATARIE VERDE/cover.jpg";
 import cover17 from "../../assets/Gallery/18.RANDARI CASA STRADA AVIONULUI/cover.jpeg";
 import cover18 from "../../assets/Gallery/19.RANDARI RESTAURANTA PONTON GIURGIU/cover.jpeg";
@@ -73,7 +73,7 @@ export const gallery = [
     link: import.meta.glob(
       "../../assets/Gallery/8.APARTAMENT ORAS GIURGIU/*.{png,jpg,jpeg,svg}"
     ),
-    cover: "/src/assets/Gallery/8.APARTAMENT ORAS GIURGIU/cover.jpeg",
+    cover: cover7,
   },
   {
     name: "Living casa Giurgiu",
@@ -129,7 +129,7 @@ export const gallery = [
     link: import.meta.glob(
       "../../assets/Gallery/16.APARTAMENT ORAS OTOPENI/*.{png,jpg,jpeg,svg,heic}"
     ),
-    cover: "/src/assets/Gallery/16.APARTAMENT ORAS OTOPENI/cover.heic",
+    cover: cover15,
   },
   {
     name: "Bucatarie verde",

@@ -44,7 +44,7 @@ export default function Navbar({ isDesktop }) {
           alt="First Concept Logo"
           ref={LogoRef}
           position={isDesktop ? "auto" : "auto auto auto 2rem"}
-          width={isDesktop ? 270 : 170}
+          width={isDesktop ? 270 : 120}
         />
         <HamburgerBtn
           handleClick={handleClick}
