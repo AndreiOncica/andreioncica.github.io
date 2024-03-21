@@ -1,49 +1,8 @@
 import React from "react";
-import styled from "styled-components";
-import { colors, Container } from "../../GlobalStyles";
-import BackgroundMobila from "../../assets/Mobila.jpeg";
+import { Container } from "../../GlobalStyles";
+import {FurnitureSection, Background, Text} from './Mobila.styled'
 
-const FurnitureSection = styled.section`
-  width: 100%;
-  height: 870px;
-  position: relative;
-`;
 
-const Background = styled.div`
-  background-image: url(${BackgroundMobila});
-  background-color: ${colors.black};
-  background-blend-mode: hard-light;
-  background-position: center;
-  background-size: cover;
-  transform: scaleX(-1);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-`;
-
-const Text = styled.div`
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  gap: 2rem;
-  padding: 3rem;
-  background: ${colors.black}DD;
-  color: ${colors.white};
-
-  & div {
-    font-weight: 200;
-    &:first-child {
-      font-size: 1.5rem;
-      font-weight: 500;
-    }
-  }
-`;
 
 export default function Mobila() {
   return (
