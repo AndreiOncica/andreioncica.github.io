@@ -64,4 +64,5 @@ export const SocialIcons = styled.div`
 export const Button = styled.button`
   background: ${colors.black};
   color: ${colors.white};
+  cursor: pointer;
 `
