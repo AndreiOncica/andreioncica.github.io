@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Projects from "./components/Proiecte/Projects";
 import Mobila from "./components/Mobila/Mobila";
 import Prices from './components/Prices/Prices'
+import Footer from './components/Footer/Footer'
 
 export default function App() {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
@@ -31,6 +32,7 @@ export default function App() {
       <Projects isDesktop={viewportWidth >= 768}/>
       <Mobila />
       <Prices />
+      <Footer isDesktop={viewportWidth >= 768}/>
     </>
   );
 }

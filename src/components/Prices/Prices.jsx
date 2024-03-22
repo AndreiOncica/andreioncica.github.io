@@ -68,7 +68,7 @@ const Prices = () => {
   };
 
   return (
-    <PriceSection className="prices__section">
+    <PriceSection className="prices__section" id="preturi">
       <Container
         display="flex"
         direction="column"
